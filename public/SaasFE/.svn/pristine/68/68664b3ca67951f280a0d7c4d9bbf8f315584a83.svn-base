@@ -1,0 +1,17 @@
+html,
+body {
+    height: 100%;
+}
+
+.service-manage-container {
+    height: 100%;
+}
+
+.service-manage-container .layui-nav-tree {
+    width: 20%;
+}
+
+.service-manage-content {
+    height: 100%;
+    margin-left: 20%;
+}

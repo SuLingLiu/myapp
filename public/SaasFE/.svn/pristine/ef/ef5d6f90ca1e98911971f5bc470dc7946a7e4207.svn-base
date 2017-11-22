@@ -1,0 +1,13 @@
+/* 文字主颜色 */
+
+.main-text-color {
+    color: #333;
+}
+
+.text-color-red {
+    color: #FF5C5C
+}
+
+body {
+    font-family: 'MicrosoftYaHei';
+}

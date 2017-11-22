@@ -1,0 +1,50 @@
+html,
+body {
+    height: 100%;
+}
+
+.service-manage-container {
+    height: 100%;
+}
+
+.service-manage-container .layui-nav-tree {
+    width: 20%;
+}
+
+.service-manage-content {
+    height: 100%;
+    margin-left: 20%;
+}
+
+.group-handle-wrapper {
+    height: 26px;
+    background: red;
+}
+
+.group-handle-wrapper .title {
+    float: left;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.group-handle-wrapper .group-handle {
+    float: right;
+    margin-right: 142px;
+}
+
+.group-handle-wrapper .group-handle .layui-form-label {
+    width: auto;
+    padding-right: 0;
+}
+
+.group-handle-wrapper .group-handle .addGroup {
+    position: relative;
+    top: 1px;
+    margin-right: 6px;
+    vertical-align: top;
+}
+
+.service-content-tab-wrapper {
+    padding-top: 35px;
+}

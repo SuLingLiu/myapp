@@ -1,0 +1,137 @@
+html,
+body {
+    height: 100%;
+}
+
+
+/* ==== start 表格样式重置 */
+
+.layui-table th,
+.layui-table td {
+    text-align: center;
+}
+
+
+/* ==== end 表格样式重置 */
+
+
+/* ==== start 按钮样式重置 */
+
+.layui-btn-sm {
+    width: 64px;
+    height: 26px;
+    line-height: 24px;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.layui-btn-primary,
+.layui-btn-primary:hover {
+    border-color: #2681dc;
+    color: #2681dc;
+}
+
+.layui-btn-normal,
+.layui-btn-normal:hover {
+    border-color: #2681dc;
+    color: #fff;
+}
+
+
+/* ==== end 按钮样式重置 */
+
+
+/* ==== start 左侧导航重置 */
+
+.layui-nav {
+    background: #f9fdff;
+    border: 1px solid #f0f0f0;
+    /*  background: yellow;
+    border: 1px solid red; */
+    border-radius: 0;
+}
+
+.layui-nav-tree .layui-nav-item a:hover {
+    background: #d9e8f7;
+}
+
+.layui-nav-itemed .layui-nav-child {
+    background: #f9fdff !important;
+}
+
+.layui-nav .layui-nav-item a,
+.layui-nav-tree .layui-nav-child a {
+    color: #333;
+}
+
+.layui-nav-itemed>a,
+.layui-nav-tree .layui-nav-title a,
+.layui-nav-tree .layui-nav-title a:hover {
+    color: #333 !important;
+}
+
+
+/* ==== end 左侧导航重置 */
+
+.service-manage-container {
+    height: 100%;
+}
+
+.service-manage-container .service-manage-side-search {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 20%;
+    height: 50px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 1px;
+    padding-bottom: 0;
+}
+
+.service-manage-container .layui-nav-tree {
+    width: 20%;
+    padding-top: 50px;
+}
+
+.service-manage-content {
+    height: 100%;
+    margin-left: 20%;
+}
+
+.group-handle-wrapper {
+    height: 26px;
+}
+
+.group-handle-wrapper .title {
+    float: left;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.group-handle-wrapper .group-handle {
+    float: right;
+    margin-right: 142px;
+}
+
+.group-handle-wrapper .group-handle .layui-form-label {
+    width: auto;
+    padding-right: 0;
+}
+
+.group-handle-wrapper .group-handle .addGroup {
+    position: relative;
+    top: 1px;
+    margin-right: 6px;
+    vertical-align: top;
+}
+
+.service-content-tab-wrapper {
+    padding-top: 35px;
+}
+
+.layui-table .s-i {
+    vertical-align: middle;
+}

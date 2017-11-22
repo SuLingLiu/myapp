@@ -1,0 +1,25 @@
+.s-i{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	overflow: hidden;
+    background-image: url(i/sprite.png) !important;
+}
+.s-i.online{ width:30px; height:30px; background-image: url(i/sprite.png); background-position:-0px -0px; }
+.s-i.offlineL{ width:26px; height:26px; background-image: url(i/sprite.png); background-position:-32px -0px; }
+.s-i.addGroup{ width:24px; height:23px; background-image: url(i/sprite.png); background-position:-60px -0px; }
+.s-i.arrowB12{ width:12px; height:12px; background-image: url(i/sprite.png); background-position:-86px -0px; }
+.s-i.arrowB6{ width:6px; height:6px; background-image: url(i/sprite.png); background-position:-112px -0px; }
+.s-i.arrowB8{ width:8px; height:8px; background-image: url(i/sprite.png); background-position:-138px -0px; }
+.s-i.arrowR8{ width:8px; height:8px; background-image: url(i/sprite.png); background-position:-164px -0px; }
+.s-i.checked15{ width:15px; height:15px; background-image: url(i/sprite.png); background-position:-190px -0px; }
+.s-i.checked20{ width:20px; height:20px; background-image: url(i/sprite.png); background-position:-216px -0px; }
+.s-i.closedModel{ width:10px; height:10px; background-image: url(i/sprite.png); background-position:-242px -0px; }
+.s-i.directory{ width:13px; height:10px; background-image: url(i/sprite.png); background-position:-268px -0px; }
+.s-i.offline{ width:20px; height:20px; background-image: url(i/sprite.png); background-position:-294px -0px; }
+.s-i.search{ width:13px; height:13px; background-image: url(i/sprite.png); background-position:-320px -0px; }
+.s-i.searchAdd{ width:20px; height:20px; background-image: url(i/sprite.png); background-position:-346px -0px; }
+.s-i.syAdd{ width:15px; height:15px; background-image: url(i/sprite.png); background-position:-372px -0px; }
+.s-i.syJump{ width:14px; height:15px; background-image: url(i/sprite.png); background-position:-398px -0px; }
+.s-i.unChecked15{ width:15px; height:15px; background-image: url(i/sprite.png); background-position:-424px -0px; }
+.s-i.unChecked20{ width:20px; height:20px; background-image: url(i/sprite.png); background-position:-450px -0px; }

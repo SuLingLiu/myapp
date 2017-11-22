@@ -1,0 +1,29 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+.idea
+.tern-port
+.DS_Store
+pids
+logs
+results
+WEB-INF
+npm-debug.log
+dev-cart
+node_modules
+build
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/

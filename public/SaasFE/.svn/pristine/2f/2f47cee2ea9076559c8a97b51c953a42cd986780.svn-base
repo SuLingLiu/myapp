@@ -1,0 +1,65 @@
+/* 文字主颜色 */
+
+.main-text-color {
+    color: #333;
+}
+
+.text-color-red {
+    color: #FF5C5C
+}
+
+body {
+    font-family: 'MicrosoftYaHei';
+}
+
+
+/* ==== start 重置select样式 */
+
+.layui-input-block {
+    min-height: 26px;
+}
+
+.layui-form-label {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 26px;
+}
+
+.layui-input {
+    height: 26px;
+    line-height: 26px;
+}
+
+
+/* ==== end 重置select样式 */
+
+
+/* ==== start 表格样式重置 */
+
+.layui-table[lay-skin=line] {
+    border-top: none;
+}
+
+.layui-table thead tr {
+    background: #eaf5ff;
+}
+
+.layui-table thead th {
+    border: none;
+}
+
+.layui-table th,
+.layui-table td {
+    padding: 0;
+}
+
+.layui-table th {
+    line-height: 35px;
+}
+
+.layui-table td {
+    line-height: 42px;
+}
+
+
+/* ==== end 表格样式重置 */

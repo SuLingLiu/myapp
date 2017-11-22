@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>客服管理</title>
+	<link rel="stylesheet" href="../lib/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/sprite.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/service-manage.css">
+</head>
+
+<body>
+	<div class="service-manage-container">
+		<ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="test">
+			<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+			<li class="layui-nav-item layui-nav-itemed">
+				<a href="javascript:;">默认展开</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:;">选项1</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">选项2</a>
+					</dd>
+					<dd>
+						<a href="">跳转</a>
+					</dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">解决方案</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="">移动模块</a>
+					</dd>
+					<dd>
+						<a href="">后台模版</a>
+					</dd>
+					<dd>
+						<a href="">电商平台</a>
+					</dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">产品</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">大数据</a>
+			</li>
+		</ul>
+
+		<div class="service-manage-content" id="serviceContentHook">
+		</div>
+
+	</div>
+
+
+	<script src="../lib/layui/layui.js"></script>
+
+	<script id="serviceContentTpl" type="text/html">
+		<div class="group-handle-wrapper main-text-color layui-clear">
+			<h2 class="title group-title-hook">{{d.title}}&nbsp;(
+				<span class="text-color-red">{{d.online}}</span>/{{d.total}}&nbsp;)
+			</h2>
+			<form class="layui-form group-handle">
+				<div class="layui-form-item">
+					<label class="layui-form-label">
+						<span class="s-i addGroup"></span>分组到：</label>
+					<div class="layui-input-block">
+						<select name="group" lay-verify="required" class="selGroupHook">
+							<option value="0">清选择</option>
+							{{# layui.each(d.group, function(index, item){ }}
+							<option value="{{index + 1}}">{{item}}</option>
+							{{# }); }}
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="service-content-tab-wrapper">
+			<table class="layui-table" lay-even lay-skin="line">
+				<colgroup>
+					<col width="150">
+					<col width="200">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>昵称</th>
+						<th>工号账户</th>
+						<th>昵称</th>
+						<th>姓名</th>
+						<th>服务上线</th>
+						<th>状态</th>
+						<th>创建时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>贤心2</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>状态</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class=" layui-btn layui-btn-sm layui-btn-primary ">编辑</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">禁用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>贤心2</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>状态</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">编辑</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">禁用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>贤心3</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>状态</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">编辑</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">禁用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary ">删除</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</script>
+	<script>
+		layui.use(['jquery', 'element', 'laytpl', 'form'], function () {
+			var $ = layui.$,
+				element = layui.element,
+				laytpl = layui.laytpl,
+				form = layui.form;
+
+			var data = {
+				title: '支付组',
+				online: 4,
+				total: 5,
+				group: [
+					'售前一组',
+					'售前二组',
+					'售前三组',
+					'售前四组',
+					'售前五组',
+				]
+			};
+
+			renderContentTabView(laytpl, form, data);
+		});
+
+		/**
+		 * @description 渲染内容区表格
+		 * @param {Object} laytpl 模板对象 (必传)
+		 * @param {Object} data 数据集 (必传)
+		 */
+		function renderContentTabView(laytpl, form, data) {
+			if (!laytpl && !data) {
+				return false;
+			}
+			var getTpl = serviceContentTpl.innerHTML,
+				view = document.getElementById('serviceContentHook');
+			laytpl(getTpl).render(data, function (html) {
+				view.innerHTML = html;
+				form.render();
+			})
+		}
+	</script>
+</body>
+
+</html>

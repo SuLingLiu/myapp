@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>layui在线调试</title>
+  <link rel="stylesheet" href="../lib/layui/css/layui.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/sysytem.css">
+</head>
+<body>
+<div class="sy-fluid layui-clear sy-default-font">
+    <div class="sy-col-p2 sy-sh">
+      <ul class="sy-ver-menu">
+      	<li><a href="system1.html" class="active">个人信息</a></li>
+      	<li><a href="system2.html">自动应答</a></li>
+      	<li><a href="system3.html">技能菜单</a></li>
+      	<li><a href="system4.html">评价标签</a></li>
+      	<li><a href="system5.html">对话标签</a></li>
+      	<li><a href="system6.html">质检标签</a></li>
+      	<li><a href="system7.html">快捷回复</a></li>
+      	<li><a href="system8.html">分配策略</a></li>
+      	<li><a href="system9.html">系统通知</a></li>
+      	<li><a href="system10.html">留言设置</a></li>
+      </ul>
+    </div>
+    <div class="sy-col-p8 sy-sh">
+      <div class="sy-userInfo-center">
+      	<div class="sy-userInfo">
+      		<img src="../css/i/avatar/5.png" width="150" height="150" alt="您的头像">
+      		<div class="sy-offline-status">在线</div>
+      	</div>
+      	<ul class="sy-userInfo-list">
+      		<li class="layui-clear">
+      			<div class="sy-name sy-fl">账号：</div>
+      			<div class="sy-val sy-fl">flkoww</div>
+      		</li>
+      		<li class="layui-clear">
+      			<div class="sy-name sy-fl">昵称：</div>
+      			<div class="sy-val sy-fl">小老虎</div>
+      		</li>
+      		<li class="layui-clear">
+      			<div class="sy-name sy-fl">服务技能组：</div>
+      			<div class="sy-val sy-fl">退换货，回收维修2组</div>
+      		</li>
+      		<li class="layui-clear">
+      			<div class="sy-name sy-fl">服务上线数：</div>
+      			<div class="sy-val sy-fl">100000</div>
+      		</li>
+      	</ul>
+      </div>
+    </div>
+</div>
+ 
+
+
+<script src="../lib/layui/layui.js"></script>
+
+</body>
+</html>        
+        

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>客服管理</title>
+	<link rel="stylesheet" href="../lib/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/sprite.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/service-manage.css">
+</head>
+
+<body>
+	<div class="service-manage-container">
+		<!-- <div class="service-manage-side-search">
+
+		</div> -->
+		<ul id="treeDemo" class="ztree"></ul>
+
+		<div class="service-manage-content" id="serviceContentHook">
+		</div>
+
+	</div>
+
+	<script id="serviceContentTpl" type="text/html">
+		<div class="group-handle-wrapper main-text-color layui-clear">
+			<h2 class="title group-title-hook">{{d.title}}&nbsp;(
+				<span class="text-color-red">{{d.online}}</span>/{{d.total}}&nbsp;)
+			</h2>
+			<form class="layui-form group-handle">
+				<div class="layui-form-item">
+					<label class="layui-form-label">
+						<span class="s-i addGroup"></span>分组到：</label>
+					<div class="layui-input-block">
+						<select name="group" lay-verify="required" class="selGroupHook">
+							<option value="0">清选择</option>
+							{{# layui.each(d.group, function(index, item){ }}
+							<option value="{{index + 1}}">{{item}}</option>
+							{{# }); }}
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="service-content-tab-wrapper">
+			<table class="layui-table main-text-color" lay-even lay-skin="line">
+				<thead>
+					<tr>
+						<th>
+							<span class="s-i checked20"></span>
+						</th>
+						<th>工号账户</th>
+						<th>昵称</th>
+						<th>姓名</th>
+						<th>服务上线</th>
+						<th>状态</th>
+						<th>创建时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="s-i checked20"></span>
+						</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>
+							<span class="s-i online"></span>
+						</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class=" layui-btn layui-btn-sm layui-btn-primary">编辑</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">禁用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="s-i checked20"></span>
+						</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>
+							<span class="s-i online"></span>
+						</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">编辑</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">禁用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="s-i unChecked20"></span>
+						</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>
+							<span class="s-i online"></span>
+						</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">编辑</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">启用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="s-i unChecked20"></span>
+						</td>
+						<td>zhangha</td>
+						<td>blue</td>
+						<td>张韩</td>
+						<td>1</td>
+						<td>
+							<span class="s-i offline"></span>
+						</td>
+						<td>2017-10-12 14:22:50</td>
+						<td>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">编辑</button>
+							<button class="layui-btn layui-btn-sm  layui-btn-normal">禁用</button>
+							<button class="layui-btn layui-btn-sm layui-btn-primary">删除</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</script>
+	<script src="../lib/layui/layui.js"></script>
+	<script src="../js/service-manage.js"></script>
+</body>
+
+</html>

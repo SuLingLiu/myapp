@@ -1,0 +1,35 @@
+[{
+    "id": "1",
+    "name": "线上",
+    "level": 1,
+    "parentId": 0,
+    "sub_org_size": 2,
+    "users_size": 0,
+    "sub_org": [{
+            "id": "1-1",
+            "name": "售前",
+            "level": 2,
+            "parentId": "1",
+            "sub_org_size": 0,
+            "users_size": 0
+        },
+        {
+            "id": "1-2",
+            "name": "售后",
+            "level": 2,
+            "parentId": "1",
+            "sub_org_size": 0,
+            "users_size": 0
+        }
+    ],
+    "users": [{
+        "uid": "1",
+        "nickname": "小美",
+        "pwd": "",
+        "name": "张海",
+        "date": "2017-09-10 18:50:20",
+        "account": "89569578",
+        "online": true,
+        "server": "4"
+    }]
+}]

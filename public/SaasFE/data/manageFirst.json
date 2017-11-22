@@ -1,0 +1,13 @@
+[{
+    "id": "1",
+    "name": "线上",
+    "level": 1,
+    "sub_org_size": 2,
+    "users_size": 0
+}, {
+    "id": "2",
+    "name": "线下",
+    "level": 1,
+    "sub_org_size": 2,
+    "users_size": 0
+}]
