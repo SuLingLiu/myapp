@@ -3,6 +3,11 @@ body {
     height: 100%;
 }
 
+em,
+i {
+    font-style: normal;
+}
+
 
 /* ==== start 表格样式重置 */
 
@@ -40,60 +45,140 @@ body {
 
 /* ==== end 按钮样式重置 */
 
+.service-manage-container {
+    height: 100%;
+}
+
 
 /* ==== start 左侧导航重置 */
 
-.layui-nav {
-    background: #f9fdff;
+.leftside-nav-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 20%;
     border: 1px solid #f0f0f0;
-    /*  background: yellow;
-    border: 1px solid red; */
-    border-radius: 0;
+    background: #f9fdff;
 }
 
-.layui-nav-tree .layui-nav-item a:hover {
+.main-title-wrapper {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.main-title-wrapper .title {
+    float: left;
+    font-size: 22px;
+}
+
+.main-title-wrapper .nav-manage {
+    float: right;
+}
+
+.main-title-wrapper .nav-manage i {
+    cursor: pointer;
+}
+
+.main-title-wrapper .nav-manage .del {
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.leftside-tree-nav {}
+
+.leftside-tree-nav .nav-item {
+    cursor: pointer;
+}
+
+.leftside-tree-nav .title {
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    padding-right: 70px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.leftside-tree-nav .title:hover {
+    background: #d9e8f7;
+    opacity: 0.8;
+}
+
+.leftside-tree-nav .title:hover .handle {
+    display: block;
+}
+
+.leftside-tree-nav .nav-item .title.cur-select,
+.leftside-tree-nav .nav-item .title.cur-select:hover {
     background: #d9e8f7;
 }
 
-.layui-nav-itemed .layui-nav-child {
-    background: #f9fdff !important;
+.leftside-tree-nav .nav-item .expanded .layui-nav-more {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
 }
 
-.layui-nav .layui-nav-item a,
-.layui-nav-tree .layui-nav-child a {
-    color: #333;
+.leftside-tree-nav .nav-item h2.expanded+.nav-child {
+    display: block;
 }
 
-.layui-nav-itemed>a,
-.layui-nav-tree .layui-nav-title a,
-.layui-nav-tree .layui-nav-title a:hover {
-    color: #333 !important;
+.leftside-tree-nav .title .layui-nav-more {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.leftside-tree-nav .title .handle {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    display: none;
+}
+
+.leftside-tree-nav .title .handle i {
+    vertical-align: middle;
+}
+
+.leftside-tree-nav .title .handle .add {
+    display: none;
+}
+
+.leftside-tree-nav .nav-item-root .title .handle .add {
+    display: inline-block;
+}
+
+.leftside-tree-nav .title .handle .rename {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.leftside-tree-nav .nav-item-sub .title .texts-wrapper {
+    padding-left: 22px;
+}
+
+.leftside-tree-nav .title .texts-wrapper {
+    padding-left: 16px;
+}
+
+.leftside-tree-nav .nav-child {
+    display: none;
 }
 
 
 /* ==== end 左侧导航重置 */
 
-.service-manage-container {
-    height: 100%;
-}
 
-.service-manage-container .service-manage-side-search {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    width: 20%;
-    height: 50px;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    padding: 1px;
-    padding-bottom: 0;
-}
-
-.service-manage-container .layui-nav-tree {
-    width: 20%;
-    padding-top: 50px;
-}
+/* ==== start 右侧样式 */
 
 .service-manage-content {
     height: 100%;
@@ -135,3 +220,6 @@ body {
 .layui-table .s-i {
     vertical-align: middle;
 }
+
+
+/* ==== end 右侧样式 */
