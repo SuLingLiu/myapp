@@ -100,7 +100,7 @@ i {
     height: 32px;
     line-height: 32px;
     position: relative;
-    padding-right: 70px;
+    padding-right: 10px;
     padding-left: 20px;
     font-size: 14px;
 }
@@ -126,7 +126,7 @@ i {
     -ms-transform: rotate(90deg);
 }
 
-.leftside-tree-nav .nav-item h2.expanded+.nav-child {
+.leftside-tree-nav .nav-item .expanded+.nav-child {
     display: block;
 }
 
@@ -139,7 +139,7 @@ i {
 
 .leftside-tree-nav .title .handle {
     position: absolute;
-    right: 10px;
+    right: 0px;
     top: 0;
     height: 100%;
     display: none;
@@ -149,12 +149,8 @@ i {
     vertical-align: middle;
 }
 
-.leftside-tree-nav .title .handle .add {
+.leftside-tree-nav .nav-child .title .handle .add {
     display: none;
-}
-
-.leftside-tree-nav .nav-item-root .title .handle .add {
-    display: inline-block;
 }
 
 .leftside-tree-nav .title .handle .rename {
@@ -162,12 +158,31 @@ i {
     font-size: 20px;
 }
 
-.leftside-tree-nav .nav-item-sub .title .texts-wrapper {
+.leftside-tree-nav .nav-item-sub .deal-wrapper,
+.leftside-tree-nav .nav-item-sub .rename-box {
     padding-left: 22px;
 }
 
-.leftside-tree-nav .title .texts-wrapper {
+.leftside-tree-nav .deal-wrapper {
+    position: relative;
     padding-left: 16px;
+    padding-right: 50px;
+}
+
+.leftside-tree-nav .rename-box {
+    padding-left: 16px;
+    height: 32px;
+    display: none;
+}
+
+.leftside-tree-nav .rename-box input {
+    height: 32px;
+    width: 100%;
+    line-height: 30px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0 10px;
 }
 
 .leftside-tree-nav .nav-child {

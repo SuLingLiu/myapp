@@ -17,7 +17,7 @@
 				<h1 class="title">客服列表</h1>
 				<div class="nav-manage">
 					<i class="s-i searchAdd root-add root-add-hook"></i>
-					<i class="layui-icon del group-del-hook">&#xe640;</i>
+					<i class="s-i rubbish del group-del-hook"></i>
 				</div>
 			</div>
 			<ul id="leftsideTreeNav" class="leftside-tree-nav">
@@ -134,7 +134,7 @@
 					<td>{{item.name}}</td>
 					<td>{{item.server}}</td>
 					<td>
-						<span class="s-i {{item.online ? 'online' : 'unChecked20'}}"></span>
+						<span class="s-i {{item.online ? 'online' : 'offline'}}"></span>
 					</td>
 					<td>{{item.date}}</td>
 					<td>
@@ -149,23 +149,28 @@
 	</script>
 	<script id="renderNavTpl" type="text/html">
 		{{# layui.each(d.content, function(index, item){ }}
-		<li class="nav-item {{d.rootClass}}">
-			<h2 class="title" id="{{item.id}}" name="{{item.name}}" level="{{item.level || ''}}" usersize="{{item.users_size || 0}}">
+		<li class="nav-item {{d.root ? 'nav-item-root' : 'nav-item-sub'}}">
+			<div class="title" idmark="{{item.id}}" name="{{item.name}}" level="{{item.level || ''}}" usersize="{{item.users_size || 0}}"
+			    parentid="{{item.parentId || ''}}">
 				{{# if(d.root){ }}
 				<i class="layui-icon layui-nav-more">&#xe623;</i> {{# } }}
-
-				<p class="texts-wrapper layui-elip">
-					<span class="texts">
-						<i>{{item.name}}</i>
-						<em>({{item.total}})
-						</em>
+				<div class="deal-wrapper">
+					<div class="texts-wrapper layui-elip">
+						<span class="texts">
+							<i class="name-hook">{{item.name}}</i>
+							<em class="total-hook">({{item.total}})
+							</em>
+						</span>
+					</div>
+					<span class="handle">
+						<i class="s-i pen rename"></i>
+						<i class="s-i searchAdd add"></i>
 					</span>
-				</p>
-				<span class="handle">
-					<i class="layui-icon rename">&#xe642;</i>
-					<i class="s-i searchAdd add"></i>
-				</span>
-			</h2>
+				</div>
+				<div class="rename-box">
+					<input class="layui-elip" idmark="{{item.id}}" type="text" value="{{item.name}}">
+				</div>
+			</div>
 		</li>
 		{{# }); }}
 	</script>
@@ -174,3 +179,10 @@
 </body>
 
 </html>
+
+<!-- 
+
+	id: 是否为唯一的
+	组名的长度限制，以及可输入的字符校验规则
+
+ -->

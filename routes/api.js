@@ -1,23 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var num = 0;
+var rootNum = 0;
 
-var rootData = [{
-	"id": "1",
-	"name": "我的上线同事我的上线同事我的上线同事我的上线同事我的上线同事我的上线同事我的上线同事",
-	"level": 1,
-	"online": 20,
-	"total": 100,
-	"sub_org_size": 2,
-	"users_size": 0
-}, {
-	"id": "2",
-	"name": "线下",
-	"level": 1,
-	"online": 20,
-	"total": 100,
-	"sub_org_size": 2,
-	"users_size": 0
-}];
 
 
 router.get('/num', function (req, res) {
@@ -25,7 +10,7 @@ router.get('/num', function (req, res) {
 		level = req.query.level,
 		id = req.query.id,
 		parentId = req.query.parentId;
-
+	++num;
 	var data = {
 		"id": id,
 		"name": name,
@@ -33,27 +18,27 @@ router.get('/num', function (req, res) {
 		"online": 20,
 		"total": 100,
 		"sub_org_size": 2,
-		"users_size": 0,
+		"users_size": 2,
 		"sub_org": [{
-			"id": id + "-1",
+			"id": id + "-" + num,
 			"total": 10,
-			"name": id + "售前",
+			"name": id + "b" + num + "售前",
 			"level": 2,
 			"parentId": "1",
 			"sub_org_size": 0,
 			"users_size": 5
 		}, {
-			"id": id + "-2",
+			"id": id + "-" + num,
 			"total": 10,
-			"name": id + "售后",
+			"name": id + "b" + num + "售后",
 			"level": 2,
 			"parentId": "1",
 			"sub_org_size": 0,
 			"users_size": 5
 		}],
 		"users": [{
-			"uid": "1",
-			"nickname": id + "小美",
+			"uid": id + "-" + num + '账号',
+			"nickname": id + "-" + "小美",
 			"pwd": "",
 			"name": "张海",
 			"date": "2017-09-10 18:50:20",
@@ -61,8 +46,8 @@ router.get('/num', function (req, res) {
 			"online": true,
 			"server": "4"
 		}, {
-			"uid": "1",
-			"nickname": id + "小li",
+			"uid": id + "-" + num + '账号',
+			"nickname": id + "-" + "小li",
 			"pwd": "",
 			"name": "小丽",
 			"date": "2017-09-10 18:50:20",
@@ -71,9 +56,54 @@ router.get('/num', function (req, res) {
 			"server": "4"
 		}]
 	};
+	var rootData = [{
+		"id": ++rootNum,
+		"name": rootNum + 'old文件夹',
+		"level": 1,
+		"online": 20,
+		"total": 100,
+		"sub_org_size": 2,
+		"users_size": 2
+	}, {
+		"id": ++rootNum,
+		"name": rootNum + 'old文件夹',
+		"level": 1,
+		"online": 20,
+		"total": 100,
+		"sub_org_size": 2,
+		"users_size": 2
+	}];
 	res.json({
 		success: true,
 		content: (id ? data : rootData)
+	})
+});
+
+router.get('/add', function (req, res) {
+	var name = req.query.name,
+		level = req.query.level,
+		id = req.query.id,
+		parentId = req.query.parentId;
+	++num
+	var data = {
+		"id": id + '-' + num,
+		"name": "新建-" + num,
+		"level": level,
+		"parentId": id,
+		"total": 0
+	};
+	var rootData = {
+		"id": ++rootNum,
+		"name": rootNum + 'old文件夹',
+		"level": 1,
+		"online": 20,
+		"total": 100,
+		"sub_org_size": 2,
+		"users_size": 2
+	}
+	res.json({
+		success: true,
+		content: id ? data : rootData
 	})
 });
 
