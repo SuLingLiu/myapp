@@ -90,8 +90,6 @@ i {
     font-size: 28px;
 }
 
-.leftside-tree-nav {}
-
 .leftside-tree-nav .nav-item {
     cursor: pointer;
 }
@@ -230,6 +228,14 @@ i {
 
 .service-content-tab-wrapper {
     padding-top: 35px;
+}
+
+.service-content-tab-wrapper label {
+    cursor: pointer;
+}
+
+.service-content-tab-wrapper input {
+    display: none;
 }
 
 .layui-table .s-i {

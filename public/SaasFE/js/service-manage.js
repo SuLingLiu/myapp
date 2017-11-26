@@ -1,6 +1,6 @@
-(function () {
+(function() {
     var $, element, laytpl, form = null; //jquery对象
-    layui.use(['jquery', 'element', 'laytpl', 'form'], function () {
+    layui.use(['jquery', 'element', 'laytpl', 'form'], function() {
         $ = layui.$;
         element = layui.element;
         laytpl = layui.laytpl;
@@ -20,18 +20,20 @@
         //左侧导航功能
         //var treeNav = new TreeNav();
         ztreeNav();
+        dealContent.init();
+
+
 
         // renderContentTabView(laytpl, form, data);
 
-        /* $(".main-title-wrapper .title").on("click", function () {
-            $(this).trigger("clickMe");
-            console.log(111111);
-        })
-        $(".main-title-wrapper .title").on("click", function () {
-            $(this).trigger("clickMe1");
-            console.log(111111);
-        })
-       */
+        /*        $(".main-title-wrapper .title").on("click", function() {
+                    console.log(888)
+                    $(this).trigger("clickMe");
+                })
+                $(".service-manage-container").on("clickMe", function() {
+                    console.log(111111);
+                })*/
+
     });
 
     /**
@@ -45,7 +47,7 @@
         }
         var getTpl = serviceContentTpl.innerHTML,
             view = document.getElementById('serviceContentHook');
-        laytpl(getTpl).render(data, function (html) {
+        laytpl(getTpl).render(data, function(html) {
             view.innerHTML = html;
             form.render();
         })
@@ -64,7 +66,7 @@
 
     TreeNav.prototype = {
         constructor: TreeNav,
-        init: function () {
+        init: function() {
             this.events = { //设置自定义事件默认参数
                 'onRename': [],
                 'onRemove': []
@@ -77,7 +79,7 @@
          * @param {Bolean} root 是否是根目录 (必传)
          * @param {Object} param 参数集 (选传)
          */
-        _getNavAjax: function (root, param) {
+        _getNavAjax: function(root, param) {
             var _this = this;
 
             $.ajax({
@@ -85,10 +87,8 @@
                 method: 'GET',
                 dataType: 'json',
                 data: param || '',
-                success: function (data) {
+                success: function(data) {
                     var content;
-                    // _this.emit('onRename', 333333);
-                    // _this.setting.async.dataFilter(data);
 
                     if (data.success) {
                         content = data.content;
@@ -98,7 +98,7 @@
                         }
                     }
                 },
-                error: function () {
+                error: function() {
                     console.log('接口错误')
                 }
             });
@@ -108,7 +108,7 @@
          * @description 获取导航和右侧表格内容数据
          * @param {Object} opt 参数集 
          */
-        _getAjax: function (opt) {
+        _getAjax: function(opt) {
             var _this = this;
 
             $.ajax({
@@ -116,13 +116,13 @@
                 method: opt.method || 'GET',
                 dataType: 'json',
                 data: opt.param || '',
-                success: function (data) {
+                success: function(data) {
 
                     if (data.success) {
                         opt.callback(data);
                     }
                 },
-                error: function () {
+                error: function() {
                     console.log('接口错误')
                 }
             });
@@ -131,7 +131,7 @@
         /**
          * @description 渲染左侧导航
          */
-        _renderNav: function (data) {
+        _renderNav: function(data) {
             var _this = this;
             var renderNavData = {},
                 renderRightContentData = {};
@@ -146,7 +146,7 @@
             //渲染左侧导航
             if (renderNavData.content && renderNavData.content.length) {
                 var getTpl = renderNavTpl.innerHTML;
-                laytpl(getTpl).render(renderNavData, function (html) {
+                laytpl(getTpl).render(renderNavData, function(html) {
                     if (data.root) {
                         _this.elem.html(html);
                         _this.elem.find('.title').eq(0).trigger('click');
@@ -164,7 +164,7 @@
         /**
          * @description 事件集合
          */
-        fnEvents: function () {
+        fnEvents: function() {
             this.navItemEvent();
             this.addSubGroupEvent();
             this.renameGroupEvent();
@@ -174,11 +174,11 @@
         /**
          * @description 左侧导航点击列表事件
          */
-        navItemEvent: function () {
+        navItemEvent: function() {
             var _this = this;
-            $(_this.elem).on('click', '.title', function (ev, isAdd) {
+            $(_this.elem).on('click', '.title', function(ev, isAdd) {
                 console.log('nav')
-                //如果是根目录点击展开或收起下级目录
+                    //如果是根目录点击展开或收起下级目录
                 if ($(this).parent('li').hasClass('nav-item-root')) {
                     if ($(this).hasClass('expanded')) {
                         if (!isAdd) {
@@ -207,9 +207,9 @@
         /**
          * @description 增加子分组
          */
-        addSubGroupEvent: function () {
+        addSubGroupEvent: function() {
             var _this = this;
-            $(_this.elem).on('click', '.title .add', function (ev) {
+            $(_this.elem).on('click', '.title .add', function(ev) {
                 var $parentTitleElem = $(this).parents('.title');
                 $parentTitleElem.trigger('click', true);
 
@@ -219,13 +219,13 @@
                 _this._getAjax({
                     url: '/api/add',
                     param: param,
-                    callback: function (data) {
+                    callback: function(data) {
                         if (data.content) {
                             var getTpl = renderNavTpl.innerHTML;
                             laytpl(getTpl).render({
                                 root: false,
                                 content: [data.content]
-                            }, function (html) {
+                            }, function(html) {
                                 if ($parentTitleElem.next('.nav-child').length > 0) {
                                     $parentTitleElem.next('.nav-child').append(html);
                                 } else {
@@ -245,9 +245,9 @@
         /**
          * @description 重命名分组
          */
-        renameGroupEvent: function () {
+        renameGroupEvent: function() {
             var _this = this;
-            $(_this.elem).on('click', '.title .rename', function (ev) {
+            $(_this.elem).on('click', '.title .rename', function(ev) {
                 var $parentTitleElem = $(this).parents('.title');
                 var $input = $parentTitleElem.find('.rename-box input');
                 $parentTitleElem.find('.deal-wrapper').hide();
@@ -261,13 +261,13 @@
         /**
          * @description 重命名分组下的input事件
          */
-        renameGroupInputEvent: function () {
+        renameGroupInputEvent: function() {
             var _this = this;
-            $(_this.elem).on('click focus', '.title input', function (ev) {
+            $(_this.elem).on('click focus', '.title input', function(ev) {
                 ev.preventDefault();
                 ev.stopPropagation();
             })
-            $(_this.elem).on('blur', '.title input', function (ev) {
+            $(_this.elem).on('blur', '.title input', function(ev) {
 
                 var name = $.trim($(this).val());
                 var $parent = $(this).parent();
@@ -304,22 +304,10 @@
 
         },
 
-        on: function (evname, callback) {
-            if (this.events[evname] && this.events[evname] instanceof Array) {
-                this.events[evname].push(callback);
-            }
-        },
-        emit: function (evname, ev) {
-            console.log(this.events[evname])
-            for (var i = 0; i < this.events[evname].length; i++) {
-                var fn = this.events[evname][i];
-                fn.call(this, ev);
-            }
-        },
         /**
          * @description 获取右侧移动分组的下拉列表数据以及渲染
          */
-        getGroupList: function () {
+        getGroupList: function() {
 
         },
 
@@ -327,23 +315,23 @@
          * @description 获取当前选择的组
          * @return {Object} 返回当前选择的组
          */
-        getSelectedNode: function () {
+        getSelectedNode: function() {
             return this.curNavElem;
         },
         /**
          * @description 增加根分组
          */
-        addRootGroup: function () {
+        addRootGroup: function() {
             var _this = this;
             _this._getAjax({
                 url: '/api/add',
-                callback: function (data) {
+                callback: function(data) {
                     if (data.content) {
                         var getTpl = renderNavTpl.innerHTML;
                         laytpl(getTpl).render({
                             root: true,
                             content: [data.content]
-                        }, function (html) {
+                        }, function(html) {
                             _this.elem.append(html);
                             _this.getGroupList();
                         });
@@ -357,7 +345,7 @@
          * @param {Object} elem 对应标题元素 (必传)
          * @return {Object} 请求ajax参数
          */
-        _getNavPara: function (elem) {
+        _getNavPara: function(elem) {
             var param = {
                 name: elem.attr('name') || '',
                 id: elem.attr('idmark') || '',
@@ -370,7 +358,7 @@
          * @description 信息提示
          * @param {String} str 提示语 (必传)
          */
-        _msg: function (str) {
+        _msg: function(str) {
             layer.msg(str, {
                 time: 2000
             });
@@ -388,16 +376,12 @@
         };
 
         var treeNav = new TreeNav(setting);
-        /* treeNav.on('onRename', function () {
-            console.log('重命名！！！')
-        });
-  */
 
 
-        $('.root-add-hook').on('click', function () {
+        $('.root-add-hook').on('click', function() {
             treeNav.addRootGroup();
         })
-        $('.group-del-hook').on('click', function () {
+        $('.group-del-hook').on('click', function() {
             alert('删除');
             return false;
             //ajax判断下面是否有人，如果有是不能删除的
@@ -416,9 +400,9 @@
         $('.group-title-hook').html('<i class="name">' + content.name + '</i><span>(' + content.total + ')</span>').attr('idmark', content.id);
         //渲染表格
         var getConTpl = serviceContentTabTpl.innerHTML;
-        laytpl(getConTpl).render(data.content, function (html) {
+        laytpl(getConTpl).render(data.content, function(html) {
             $('#serviceContentTabHook').html(html)
-            // form.render();
+                // form.render();
         })
 
     }
@@ -428,5 +412,76 @@
      * @param {Object} data 数据集 (必传)
      */
     function renderMoveGroup(data) {}
+
+
+    var dealContent = {
+        init: function() {
+            this._events();
+        },
+
+        _events: function() {
+            this._multSelEventFn();
+            this._allSelEventFn();
+        },
+        /**
+         * @description 包含多选事件
+         */
+        _multSelEventFn: function() {
+            var _this = this;
+            $('#serviceContentTabHook').on('click', 'input.mult-select-hook', function(ev) {
+                _this._dealSelStyle($(this));
+                $('#serviceContentTabHook input.select-all-hook').prop('checked', _this._isCheckAll());
+                _this._dealSelStyle($('#serviceContentTabHook input.select-all-hook'));
+            })
+
+        },
+        /**
+         * @description 包含全选事件
+         */
+        _allSelEventFn: function() {
+            var _this = this;
+            $('#serviceContentTabHook').on('click', 'input.select-all-hook', function(ev) {
+                _this._dealSelStyle($(this));
+                _this._dealMultCheck($(this).prop('checked'));
+            })
+        },
+        /**
+         * @description 全选带动多选，处理多选是否全部选中或全部不选择
+         * @param {Boolean} 选中传true，否则传false(必传)
+         */
+        _dealMultCheck: function(checked) {
+            var _this = this;
+            $('#serviceContentTabHook input.mult-select-hook').prop('checked', checked).each(function() {
+                _this._dealSelStyle($(this));
+            });
+        },
+
+        /**
+         * @description 点击左侧的多选样式操作
+         * @param {Object} elem 点击的元素(必传)
+         */
+        _dealSelStyle: function(elem) {
+            var checkVal = elem.prop('checked');
+            var $iconElem = elem.next('.icon');
+            if (checkVal) {
+                $iconElem.removeClass('unChecked20').addClass('checked20');
+            } else {
+                $iconElem.removeClass('checked20').addClass('unChecked20');
+            }
+        },
+        /**
+         * @description 多选带动全选，返回全选是否选中
+         * @return {Boolean} 选中返回true，否则返回false(必传)
+         */
+        _isCheckAll: function() {
+            var $multElem = $('#serviceContentTabHook input.mult-select-hook');
+            for (var i = 0; i < $multElem.length; i++) {
+                if (!$multElem.eq(i).prop('checked')) { return false; }
+            }
+            return true;
+        }
+
+
+    }
 
 })();

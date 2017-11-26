@@ -2,180 +2,179 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>客服管理</title>
-	<link rel="stylesheet" href="../lib/layui/css/layui.css">
-	<link rel="stylesheet" href="../css/sprite.css">
-	<link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/service-manage.css">
+    <meta charset="UTF-8">
+    <title>客服管理</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/sprite.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/service-manage.css">
 </head>
 
 <body>
-	<div class="service-manage-container">
-		<div class="leftside-nav-wrapper main-text-color">
-			<div class="main-title-wrapper">
-				<h1 class="title">客服列表</h1>
-				<div class="nav-manage">
-					<i class="s-i searchAdd root-add root-add-hook"></i>
-					<i class="s-i rubbish del group-del-hook"></i>
-				</div>
-			</div>
-			<ul id="leftsideTreeNav" class="leftside-tree-nav">
-				<li class="nav-item">
-					<h2 class="title expanded cur-select">
-						<i class="layui-icon layui-nav-more">&#xe623;</i>
-						<p class="texts-wrapper">
-							<span class="texts">我的上线同事
+    <div class="service-manage-container">
+        <div class="leftside-nav-wrapper main-text-color">
+            <div class="main-title-wrapper">
+                <h1 class="title">客服列表</h1>
+                <div class="nav-manage">
+                    <i class="s-i searchAdd root-add root-add-hook"></i>
+                    <i class="s-i rubbish del group-del-hook"></i>
+                </div>
+            </div>
+            <ul id="leftsideTreeNav" class="leftside-tree-nav">
+                <li class="nav-item">
+                    <h2 class="title expanded cur-select">
+                        <i class="layui-icon layui-nav-more">&#xe623;</i>
+                        <p class="texts-wrapper">
+                            <span class="texts">我的上线同事
 								<em>(
 									<i class="text-color-red">3</i>/4)</em>
 							</span>
-						</p>
-						<span class="handle">
+                        </p>
+                        <span class="handle">
 							<i class="s-i searchAdd add"></i>
 							<i class="layui-icon rename">&#xe642;</i>
 						</span>
-					</h2>
-					<ul class="nav-child">
-						<li class="nav-item">
-							<h2 class="title">
-								<i class="layui-icon layui-nav-more">&#xe623;</i>
-								<p class="texts-wrapper">
-									<span class="texts">售前一组
+                    </h2>
+                    <ul class="nav-child">
+                        <li class="nav-item">
+                            <h2 class="title">
+                                <i class="layui-icon layui-nav-more">&#xe623;</i>
+                                <p class="texts-wrapper">
+                                    <span class="texts">售前一组
 										<span>(
 											<em class="online">3</em>/4</span>
-									</span>
-								</p>
-								<span class="handle">
+                                    </span>
+                                </p>
+                                <span class="handle">
 									<i class="s-i searchAdd add"></i>
 									<i class="layui-icon rename">&#xe642;</i>
 								</span>
-							</h2>
-						</li>
-						<li class="nav-item nav-item-active">
-							<h2 class="title">
-								<i class="layui-icon layui-nav-more">&#xe623;</i>
-								<p class="texts-wrapper">
-									<span class="texts">售前一组
+                            </h2>
+                        </li>
+                        <li class="nav-item nav-item-active">
+                            <h2 class="title">
+                                <i class="layui-icon layui-nav-more">&#xe623;</i>
+                                <p class="texts-wrapper">
+                                    <span class="texts">售前一组
 										<span>(
 											<em class="online">3</em>/4</span>
-									</span>
-								</p>
-								<span class="handle">
+                                    </span>
+                                </p>
+                                <span class="handle">
 									<i class="s-i searchAdd add"></i>
 									<i class="layui-icon rename">&#xe642;</i>
 								</span>
-							</h2>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+                            </h2>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-		<div class="service-manage-content" id="serviceContentHook">
-			<!-- 右侧头部区域 -->
-			<div class="group-handle-wrapper main-text-color layui-clear">
-				<h2 class="title group-title-hook">{{d.name}}
-					<span>({{d.total}})</span>
-				</h2>
-				<form class="layui-form group-handle">
-					<div class="layui-form-item">
-						<label class="layui-form-label">
+        <div class="service-manage-content" id="serviceContentHook">
+            <!-- 右侧头部区域 -->
+            <div class="group-handle-wrapper main-text-color layui-clear">
+                <h2 class="title group-title-hook">{{d.name}}
+                    <span>({{d.total}})</span>
+                </h2>
+                <form class="layui-form group-handle">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
 							<span class="s-i addGroup"></span>分组到：</label>
-						<div class="layui-input-block">
-							<select name="group" lay-verify="required" class="selGroupHook">
+                        <div class="layui-input-block">
+                            <select name="group" lay-verify="required" class="selGroupHook">
 								<option value="0">清选择</option>
 								{{# layui.each(d.group, function(index, item){ }}
 								<option value="{{index + 1}}">{{item}}</option>
 								{{# }); }}
 							</select>
-						</div>
-					</div>
-				</form>
-			</div>
-			<!-- 右侧表格区域 -->
-			<div class="service-content-tab-wrapper" id="serviceContentTabHook">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 右侧表格区域 -->
+            <div class="service-content-tab-wrapper" id="serviceContentTabHook">
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-	</div>
+    </div>
 
-	<script id="serviceMoveGroupTpl" type="text/html">
-		<option value="0">清选择</option>
-		{{# layui.each(d.group, function(index, item){ }}
-		<option value="{{index + 1}}">{{item}}</option>
-		{{# }); }}
-	</script>
-	<script id="serviceContentTabTpl" type="text/html">
-		<table class="layui-table main-text-color" lay-even lay-skin="line">
-			<thead>
-				<tr>
-					<th>
-						<span class="s-i checked20"></span>
-					</th>
-					<th>工号账户</th>
-					<th>昵称</th>
-					<th>姓名</th>
-					<th>服务上线</th>
-					<th>状态</th>
-					<th>创建时间</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody>
+    <script id="serviceMoveGroupTpl" type="text/html">
+        <option value="0">清选择</option>
+        {{# layui.each(d.group, function(index, item){ }}
+        <option value="{{index + 1}}">{{item}}</option>
+        {{# }); }}
+    </script>
+    <script id="serviceContentTabTpl" type="text/html">
+        <table class="layui-table main-text-color member-lists-hook" lay-even lay-skin="line">
+            <thead>
+                <tr>
+                    <th>
+                        <label><input type="checkbox" class="select-all-hook"><i class="s-i unChecked20 icon"></i></label>
+                    </th>
+                    <th>工号账户</th>
+                    <th>昵称</th>
+                    <th>姓名</th>
+                    <th>服务上线</th>
+                    <th>状态</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
 
-				{{# layui.each(d.users, function(index, item){ }}
-				<tr>
-					<td>
-						<span class="s-i checked20"></span>
-					</td>
-					<td>{{item.uid}}</td>
-					<td>{{item.nickname}}</td>
-					<td>{{item.name}}</td>
-					<td>{{item.server}}</td>
-					<td>
-						<span class="s-i {{item.online ? 'online' : 'offline'}}"></span>
-					</td>
-					<td>{{item.date}}</td>
-					<td>
-						<button class=" layui-btn layui-btn-sm layui-btn-primary">编辑</button>
-						<button class="layui-btn layui-btn-sm layui-btn-primary">禁用</button>
-						<button class="layui-btn layui-btn-sm layui-btn-primary">删除</button>
-					</td>
-				</tr>
-				{{# }); }}
-			</tbody>
-		</table>
-	</script>
-	<script id="renderNavTpl" type="text/html">
-		{{# layui.each(d.content, function(index, item){ }}
-		<li class="nav-item {{d.root ? 'nav-item-root' : 'nav-item-sub'}}">
-			<div class="title" idmark="{{item.id}}" name="{{item.name}}" level="{{item.level || ''}}" usersize="{{item.users_size || 0}}"
-			    parentid="{{item.parentId || ''}}">
-				{{# if(d.root){ }}
-				<i class="layui-icon layui-nav-more">&#xe623;</i> {{# } }}
-				<div class="deal-wrapper">
-					<div class="texts-wrapper layui-elip">
-						<span class="texts">
+                {{# layui.each(d.users, function(index, item){ }}
+                <tr>
+                    <td>
+                        <label><input class="mult-select-hook" type="checkbox"><i class="s-i unChecked20 icon"></i></label>
+                    </td>
+                    <td>{{item.uid}}</td>
+                    <td>{{item.nickname}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.server}}</td>
+                    <td>
+                        <span class="s-i {{item.online ? 'online' : 'offline'}}"></span>
+                    </td>
+                    <td>{{item.date}}</td>
+                    <td>
+                        <button class=" layui-btn layui-btn-sm layui-btn-primary">编辑</button>
+                        <button class="layui-btn layui-btn-sm layui-btn-primary">禁用</button>
+                        <button class="layui-btn layui-btn-sm layui-btn-primary">删除</button>
+                    </td>
+                </tr>
+                {{# }); }}
+            </tbody>
+        </table>
+    </script>
+    <script id="renderNavTpl" type="text/html">
+        {{# layui.each(d.content, function(index, item){ }}
+        <li class="nav-item {{d.root ? 'nav-item-root' : 'nav-item-sub'}}">
+            <div class="title" idmark="{{item.id}}" name="{{item.name}}" level="{{item.level || ''}}" usersize="{{item.users_size || 0}}" parentid="{{item.parentId || ''}}">
+                {{# if(d.root){ }}
+                <i class="layui-icon layui-nav-more">&#xe623;</i> {{# } }}
+                <div class="deal-wrapper">
+                    <div class="texts-wrapper layui-elip">
+                        <span class="texts">
 							<i class="name-hook">{{item.name}}</i>
 							<em class="total-hook">({{item.total}})
 							</em>
 						</span>
-					</div>
-					<span class="handle">
+                    </div>
+                    <span class="handle">
 						<i class="s-i pen rename"></i>
 						<i class="s-i searchAdd add"></i>
 					</span>
-				</div>
-				<div class="rename-box">
-					<input class="layui-elip" idmark="{{item.id}}" type="text" value="{{item.name}}">
-				</div>
-			</div>
-		</li>
-		{{# }); }}
-	</script>
-	<script src="../lib/layui/layui.js"></script>
-	<script src="../js/service-manage.js"></script>
+                </div>
+                <div class="rename-box">
+                    <input class="layui-elip" idmark="{{item.id}}" type="text" value="{{item.name}}">
+                </div>
+            </div>
+        </li>
+        {{# }); }}
+    </script>
+    <script src="../lib/layui/layui.js"></script>
+    <script src="../js/service-manage.js"></script>
 </body>
 
 </html>
@@ -184,5 +183,7 @@
 
 	id: 是否为唯一的
 	组名的长度限制，以及可输入的字符校验规则
+	上线下线是否可点击
+	禁用后上线下线标示是否变化
 
  -->
