@@ -1,0 +1,112 @@
+.sy-default-font{font-family: MicrosoftYaHei;font-size: 12px;color: #333333;letter-spacing: 0;line-height: 12px;}
+.sy-fluid{position:relative;margin: 0;padding: 0;overflow: hidden;}
+/* 重写表单 */
+.layui-input, .layui-select, .layui-textarea{height: 25px;border-radius: 4px;}
+.layui-badge-rim, .layui-colla-content, .layui-colla-item, .layui-collapse, .layui-elem-field, .layui-form-pane .layui-form-item[pane], .layui-form-pane .layui-form-label, .layui-input, .layui-layedit, .layui-layedit-tool, .layui-quote-nm, .layui-select, .layui-tab-bar, .layui-tab-card, .layui-tab-title, .layui-tab-title .layui-this:after, .layui-textarea{
+    border-color: #ededed;
+}
+.layui-form-checkbox span{font-size: 12px;line-height: 15px;}
+.layui-form-checkbox[lay-skin=primary] i {
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+.layui-form-checked[lay-skin="primary"]:hover i{color: #2681DC;}
+.layui-form-checked[lay-skin=primary] i {
+    border-color: #2681DC;
+    background-color: #fff;
+    color: #2681DC;
+}
+.layui-form-checked[lay-skin=primary] i:hover{color: #2681DC;}
+.layui-input, .layui-textarea{padding-left: 15px;}
+.layui-btn{
+    height: 25px; 
+    line-height: 25px; 
+    padding: 0 35px; 
+    background-color: #fff;
+    color: #2681DC ;
+    border:1px solid #2681DC;
+    border-radius: 3px;
+}
+.layui-btn+.layui-btn {
+    margin-left: 8px;
+}
+.layui-btn:hover{color:#2681DC; }
+
+/*两块区域设置等高*/
+.sy-sh{margin-bottom: -2000px;padding-bottom: 2000px;}
+.sy-pr{position: relative;}
+.sy-pa{position: absolute;}
+.sy-fl{float: left;}
+.sy-fr{float: right;}
+.sy-center{width: 300px;text-align: center;}
+.sy-tr{text-align: right;}
+.sy-mt20{margin-top: 20px;}
+.sy-mt40{margin-top:40px;}
+.sy-mt60{margin-top: 60px;}
+.sy-ml5{margin-left: 5px;}
+.sy-ml20{margin-left:20px;}
+.sy-mt28{margin-top:28px;}
+.sy-mb15{margin-bottom: 15px;}
+.sy-mb23{margin-bottom: 23px;}
+.sy-mb25{margin-bottom: 25px;}
+.sy-mb20{margin-bottom: 20px;}
+.sy-mb30{margin-bottom: 30px;}
+.sy-mr40{margin-right: 40px;}
+.sy-lh25{line-height: 25px;}
+.sy-tc{text-align: center;}
+.sy-col-p2{float:left;width: 120px;}
+.sy-col-p8{float:left;width: 554px;}
+.sy-btn-xs{padding:0 19px;font-size: 12px;}
+.sy-ver-menu{padding-top:13px;padding-bottom: 200px;border-right:1px solid #F0F0F0;background-color: #F9FDFF}
+.sy-ver-menu li{margin-bottom: 3px;}
+.sy-ver-menu a{display: block;height:30px;line-height: 30px;text-decoration: none;text-align: center;}
+.sy-ver-menu .active{background-color: #D9E8F7;}
+
+/*个人信息*/
+.sy-userInfo-center{width: 360px;margin: 30px auto 0;}
+.sy-offline-status {position: absolute;bottom: 0;left: 50%;margin-left: -15px;margin-bottom: -15px;}
+.sy-userInfo{text-align: center;}
+.sy-userInfo-list{margin-top:27px;}
+.sy-userInfo-list li{height: 25px;}
+.sy-name{width: 160px;text-align: right;}
+.sy-val {width: 200px;}
+
+/* 自动应答 */
+.sy-field-title{margin-right:15px;width: 100px;text-align: center;font-size: 14px;}
+.sy-nor-form .layui-form-item .layui-form-checkbox[lay-skin=primary]{margin-top:0;}
+.sy-nor-form .layui-form-checkbox span, .layui-form-checkbox:hover span{font-size: 12px;line-height: 15px;}
+.sy-nor-form .layui-form-select{width: 300px;}
+.sy-nor-form .layui-form-label{width: 100px;padding: 0 8px;}
+.sy-nor-form .layui-input-block{margin-left: 116px;}
+.sy-nor-form input[type="text"],.sy-nor-form textarea {width: 300px}
+
+.sy-nor-form .layui-input-inline{width: 300px;margin-right: 6px;}
+.sy-form-jn{margin:0 60px 60px 20px;}
+.sy-form-jn h3{margin-bottom: 20px;font-size: 14px;}
+.sy-form-jn .layui-form-item{margin-left:60px;margin-bottom: 20px}
+.sy-tag{display: inline-block;margin-right: 7px;margin-bottom: 10px;position: relative;height:23px;line-height:23px;padding:0 18px 0 15px;cursor: pointer;border:1px solid #2681DC;color:#2681DC;border-radius: 4px}
+.sy-tag .remove{position: absolute;right: 2px;top:-4px;color: #ccc;}
+.layui-btn+.layui-btn.sy-btn-ml55{margin-left: 55px;}
+/* 技能菜单 */
+.sy-skill-cont{margin:25px 5px 20px 5px;}
+.sy-skill-cont .layui-tab-content{padding: 0}
+.sy-search-form{padding: 25px 5px 0;}
+.sy-app-label{width: 72px;float: left;line-height: 25px;}
+.sy-app-block{width: 120px;float: left;}
+.sy-skill-btn{float: right;margin-right: 40px}
+.sy-skill-btn button{padding: 0 19px;font-size: 12px;}
+
+/* 分配策略 */
+.sy-allotment-center{width: 200px;margin: 100px auto;}
+
+/* 留言设置 */
+.sy-mes-h3{margin-left: 20px;margin-bottom: 20px;}
+.sy-mes-item{margin-bottom: 40px;clear: both; *zoom: 1;}
+.sy-mes-item:after{content:'\20'; clear:both; *zoom:1; display:block; height:0;}
+.sy-mes-label{float: left;padding: 0 10px 0 20px;line-height: 25px;}
+.sy-mes-block{float: left;width: 400px;}
+.sy-mes-block .layui-form-select{width: 72px;}
+.sy-mes-block input[type="text"],.sy-mes-block  textarea{width: 72px;}

@@ -1,0 +1,59 @@
+/* ------------搜索 start------------ */
+.searchBox{
+    padding: 10px;
+    font-size: 12px;
+}
+.searchBoxTop{
+    font-size: 14px;
+    padding:20px 0 48px 0;
+}
+.searchBoxTop p{
+    display: inline-block;
+    padding-right: 40px;
+}
+.searchBoxTop p span {
+    color:#2681DC;
+}
+.layui-inline{
+    padding-right: 22px;
+}
+.layui-input{
+    border-color:#ededed;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    padding: 0 15px;
+}
+.layui-form-item .layui-input-inline{
+    width:120px;
+}
+.layui-form-label {
+    float: left;
+    display: block;
+    min-width: 62px;
+    width:auto;
+    font-weight: 400;
+    text-align: right;
+    padding: 0;
+    line-height: 24px;
+}
+.layui-form-select dl{
+    padding-top: 0;
+    top: 23px;
+}
+.btn{
+    width:65px;
+    height:26px;
+    line-height: 26px;
+    color:#2681DC;
+    text-align: center;
+    border:1px solid #2681DC;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* ------------搜索 end------------ */
+
+/* ------------表格(搜索结果) start------------ */
+
+/* ------------表格(搜索结果) end------------ */

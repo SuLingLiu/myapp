@@ -1,0 +1,129 @@
+/* 文字主颜色 */
+
+.main-text-color {
+    color: #333;
+}
+
+.text-color-red {
+    color: #FF5C5C
+}
+
+body {
+    font-family: 'MicrosoftYaHei';
+}
+
+
+/* ==== start 重置select样式 */
+
+.layui-input-block {
+    min-height: 26px;
+}
+
+.layui-form-label {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 26px;
+}
+
+.layui-input {
+    height: 26px;
+    line-height: 26px;
+}
+
+
+/* ==== end 重置select样式 */
+
+
+/* ==== start 表格样式重置 */
+
+.layui-table[lay-skin=line] {
+    border-top: none;
+}
+
+.layui-table thead tr {
+    background: #eaf5ff;
+}
+
+.layui-table thead th {
+    border: none;
+}
+
+.layui-table th,
+.layui-table td {
+    padding: 0;
+}
+
+.layui-table th {
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.layui-table td {
+    line-height: 42px;
+    font-size: 12px;
+}
+
+
+/* ==== end 表格样式重置 */
+/*下拉菜单覆盖*/
+.layui-form-select dl{top:30px;}
+.layui-form-select dl dd{line-height: 25px;}
+
+/* tab切换  在包含tab的样式上加nor-tab*/
+.nor-tab > .layui-tab-title{height: 37px;border: none;}
+.nor-tab > .layui-tab-title .layui-this{color:#fff;background-color: #11A6F8;border:1px solid #11A6F8;}
+.nor-tab > .layui-tab-title .layui-this:after{
+    position: absolute;
+    top: 21px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0px;
+    height: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.nor-tab > .layui-tab-title li{margin-left: -1px;line-height: 35px;border:1px solid #ccc;background-color: #f8f8f8;border-radius: 1px;}
+
+/* ==== start 翻页样式重置 */
+
+.layui-laypage a, .layui-laypage button, .layui-laypage input, .layui-laypage select, .layui-laypage span{
+    border: 0;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+    background:#BEDBF7;
+    color:#fff; 
+    width:22px;
+    height: 22px;
+    border-radius: 11px;
+    top:2px;
+    margin:0 auto;
+    display: inline-block;
+}
+.layui-laypage a, .layui-laypage span{
+    text-align: center;
+    padding:0 11px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.layui-laypage .layui-laypage-curr em{
+    display: inline-block;
+    margin: 0 auto;
+    width:24px;
+    height: 24px;
+    text-align: center;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+    left:auto;
+}
+.layui-laypage input,.layui-laypage-btn, .layui-laypage button{
+    border:1px solid #2681DC;
+    color:#2681DC;
+    vertical-align: middle;
+    height: 22px;
+    line-height: 22px;
+} 
+.layui-laypage input{
+    width: 24px;
+}
+/* ==== end 翻页样式重置 */

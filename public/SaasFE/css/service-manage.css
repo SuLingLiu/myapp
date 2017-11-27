@@ -16,14 +16,30 @@ i {
     text-align: center;
 }
 
+.layui-btn+.layui-btn {
+    margin-right: 0px;
+}
+
+.layui-btn+.layui-btn {
+    margin-left: 6px;
+}
+
 
 /* ==== end 表格样式重置 */
+
+
+/* 表格 */
+
+.layui-table th,
+.layui-table td {
+    padding: 0 5px;
+}
 
 
 /* ==== start 按钮样式重置 */
 
 .layui-btn-sm {
-    width: 64px;
+    width: 50px;
     height: 26px;
     line-height: 24px;
     border-radius: 3px;
@@ -60,7 +76,7 @@ i {
     overflow-x: hidden;
     z-index: 999;
     box-sizing: border-box;
-    width: 20%;
+    width: 24%;
     border: 1px solid #f0f0f0;
     background: #f9fdff;
 }
@@ -99,7 +115,7 @@ i {
     line-height: 32px;
     position: relative;
     padding-right: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 14px;
 }
 
@@ -130,7 +146,7 @@ i {
 
 .leftside-tree-nav .title .layui-nav-more {
     position: absolute;
-    left: 16px;
+    left: 5px;
     top: 50%;
     margin-top: -15px;
 }
@@ -152,19 +168,18 @@ i {
 }
 
 .leftside-tree-nav .title .handle .rename {
-    margin-right: 10px;
-    font-size: 20px;
+    margin-right: 6px;
 }
 
 .leftside-tree-nav .nav-item-sub .deal-wrapper,
 .leftside-tree-nav .nav-item-sub .rename-box {
-    padding-left: 22px;
+    padding-left: 20px;
 }
 
 .leftside-tree-nav .deal-wrapper {
     position: relative;
-    padding-left: 16px;
-    padding-right: 50px;
+    padding-left: 14px;
+    padding-right: 40px;
 }
 
 .leftside-tree-nav .rename-box {
@@ -195,7 +210,7 @@ i {
 
 .service-manage-content {
     height: 100%;
-    margin-left: 20%;
+    margin-left: 24%;
 }
 
 .group-handle-wrapper {
@@ -209,20 +224,27 @@ i {
     line-height: 26px;
 }
 
-.group-handle-wrapper .group-handle {
+.group-handle-wrapper .add-group-handle {
     float: right;
     margin-right: 142px;
+}
+
+.group-handle-wrapper .group-handle {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .group-handle-wrapper .group-handle .layui-form-label {
     width: auto;
     padding-right: 0;
+    padding-left: 10px;
 }
 
-.group-handle-wrapper .group-handle .addGroup {
-    position: relative;
-    top: 1px;
-    margin-right: 6px;
+.group-handle-wrapper .layui-input-block {
+    margin-left: 80px;
+}
+
+.group-handle-wrapper .add-group-handle .addGroup {
     vertical-align: top;
 }
 
@@ -238,9 +260,132 @@ i {
     display: none;
 }
 
+.service-content-tab-wrapper .layui-table tbody tr.bg {
+    background: #fffef3;
+}
+
 .layui-table .s-i {
     vertical-align: middle;
 }
 
 
 /* ==== end 右侧样式 */
+
+
+/* ==== start 弹窗样式 */
+
+.member-popup-wrapper {
+    color: #333;
+    font-size: 12px;
+    max-width: 80%;
+    min-width: 60%;
+}
+
+.member-popup-wrapper .layui-layer-title {
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 16px;
+    background: #0ec9fc;
+    background: -webkit-linear-gradient(left, #0ec9fc, #1667f0);
+    background: -o-linear-gradient(left, #0ec9fc, #1667f0);
+    background: -moz-linear-gradient(left, #0ec9fc, #1667f0);
+    background: linear-gradient(left, #0ec9fc, #1667f0);
+}
+
+.member-popup-wrapper .layui-layer-setwin {
+    height: 32px;
+    width: 32px;
+    right: 20px;
+    top: 0;
+    text-align: right;
+    line-height: 32px;
+}
+
+.member-popup-wrapper .layui-layer-setwin .layui-layer-close {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    overflow: hidden;
+    background-image: url(i/sprite.png) !important;
+    width: 10px;
+    height: 10px;
+    background-image: url(i/sprite.png);
+    background-position: -210px -0px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.member-popup-wrapper .layui-layer-content {
+    margin-top: 15px;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form {
+    padding: 0 15px;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form-item {
+    position: relative;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form-item .layui-form-label {
+    width: 85px;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form-item .layui-input-block {
+    margin-left: 115px;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form-item .layui-word-aux-right {
+    margin-right: 110px;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form-item .layui-word-aux {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    line-height: 24px;
+    padding: 0!important;
+    color: #989898;
+}
+
+.member-popup-wrapper .layui-layer-content .layui-form-item .layui-input-block input,
+.member-popup-wrapper .layui-layer-content .layui-form-item .layui-input-inline input {
+    padding: 0 10px;
+}
+
+.member-popup-wrapper .layui-form-item .layui-form-checkbox[lay-skin=primary] {
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.member-popup-wrapper .btn-wrapper {
+    padding-bottom: 20px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 30px;
+}
+
+.member-popup-wrapper .btn-wrapper button {
+    width: 80px;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #2681dc;
+    font-size: 14px;
+    border-radius: 3px;
+    background: #fff;
+    color: #2681dc;
+    box-sizing: border-box;
+}
+
+
+/* .member-popup-wrapper .btn-wrapper button:nth-of-type(1) {
+    margin-right: 30px;
+} */
+
+.member-popup-wrapper .layui-form-selected dl {
+    max-height: 150px;
+}
+
+
+/* ==== end 弹窗样式 */

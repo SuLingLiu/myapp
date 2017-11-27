@@ -1,0 +1,153 @@
+body {
+    font-family: MicrosoftYaHei;
+    /* user-select:none; */  /*禁止选中*/
+}
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool {
+    background: #FFFFFF;
+}
+.reply_div {
+    padding: 15px;
+}
+.search_div {
+    position: relative;
+    margin-top: 5px;
+}
+.h3_style {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.search_div .search_input {
+    width: 140px;
+    height: 25px!important;
+    background: #EAEAEA;
+    border: 1px solid #F8F8F8;
+    border-radius: 100px!important;
+    text-indent: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #666!important;
+    z-index: 11;
+    -webkit-transition: width ease .15s;
+    -o-transition: width ease .15s;
+    transition: width ease .15s;
+}
+.search_icon {
+    position: absolute;
+    left: 120px;
+    top: 8px;
+    cursor: pointer;
+}
+.reply_list {
+    margin-top: 15px;
+}
+.reply_ul .reply_li {
+    margin-top:10px;
+}
+.reply_li .li-child {
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.reply_li .li-title {
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.reply_li .li-child .dd-a-style {
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 12px;
+}
+.reply_li .li-child .dd-style {
+    margin-bottom: 5px;
+}
+.li-itemed .li-child {
+    display: none;
+}
+
+.table-info .tr-title {
+    height: 25px;
+    background: #ffffff;
+}
+.table-info .tr-title .th-style {
+    font-size: 12px;
+    color: #4C8AAD;
+    letter-spacing: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.table-info .tr-title .td-style {
+    padding: 5px 10px;
+}
+.turn-tr .td-style .turn-div {
+    margin:0 auto;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 5px;
+    display: flex;
+}
+.turn-tr .td-style .turn-div .turn-left {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: url('i/1x/turn-left.png') no-repeat;   
+    flex: 0 0 auto;
+    margin: auto;
+}
+.turn-tr .td-style .turn-div .turn-right {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: url('i/1x/turn-right.png') no-repeat;
+    flex: 0 0 auto;
+    margin: auto;
+}
+.table-info .tr-title .td-style .item-title {
+    font-size: 12px;
+    color: #A0A0A0;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.table-info .tr-title .td-style .span-style {
+    font-size: 12px;
+    color: #151515;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.table-info .tr-title .td-style .span-red {
+    color: #FF5C5C;
+}
+.tr-title .td-style .item-title .input-remark {
+    display: none;
+    width: 124px;
+    height: 20px;
+    border: 1px solid #d6dbe5;
+}
+.tr-title .td-style .item-title .update-icon {
+    color:#2681DC;
+    cursor: pointer;
+}
+.tr-title .td-style .div-btn {
+    margin:0 auto;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.tr-title .td-style .btn-order {
+    width:100px;
+    height: 25px;
+    background: #ffffff;
+    border: 1px solid #2681DC;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #2681DC;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
